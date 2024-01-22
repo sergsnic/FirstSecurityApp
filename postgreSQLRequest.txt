@@ -8,3 +8,8 @@ insert into Person(username, year_of_birth, "password") values ('test_user1',196
 insert into Person(username, year_of_birth, "password") values ('test_user2',1960,'test_password');
 
 select * from Person;
+
+truncate table person;
+alter table person add role varchar(100) not null ;
+
+update person set role = 'ROLE_ADMIN' where username = 'admin';
